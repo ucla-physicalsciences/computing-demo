@@ -1,0 +1,2 @@
+baseurl: /computing-demo
+exclude: ['README.md']

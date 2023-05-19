@@ -1,0 +1,45 @@
+<div class="flex-container p-1 text-white text-left" > 
+    <ol class="breadcrumb topbar-text">
+    <li class="breadcrumb-item"><a href="https://www.ucla.edu/" class="remove-underline"><img src="{{site.baseurl}}/assets/images/logo_UCLA_white.png" class="ucla-logo" /></a></li>
+    <li class="breadcrumb-item"><a href="https://www.college.ucla.edu/" class="remove-underline text-link">College</a></li>
+    <li class="breadcrumb-item"><a href="https://www.physicalsciences.ucla.edu/" class="remove-underline text-link">Physical Sciences</a></li>
+    <li class="breadcrumb-item"><a href="https://www.pa.ucla.edu/" class="remove-underline text-link">Physics & Astronomy</a></li>
+    </ol>
+</div>
+<nav class="py-4 navbar navbar-expand-lg  auto-hiding-navbar navbar-light bg-light">
+     <div class="container">
+       <a class="navbar-brand" href="#"><h2>Computing and Information Systems Group</h2></a>
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+   
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav ms-auto">
+           <li class="nav-item">
+             <a class="nav-link {% if page.url == '/' %}active{% endif %}" aria-current="page" href="{{site.baseurl}}/">Home</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link {% if page.url == '/helpdesk.html' %}active{% endif %}" href="{{site.baseurl}}/helpdesk.html">Helpdesk</a>
+           </li>
+           <li class="nav-item dropdown"> 
+              <a class="nav-link dropdown-toggle {% if page.url contains 'services-resources' %}active{% endif %}" href="services-resources.html" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services Resources
+              </a>
+              <!-- <ul class="dropdown-menu menu-dropdown" aria-labelledby="dropdownMenuLink"> -->
+               <ul class="dropdown-menu">
+                                <li>
+                                    <a class="text-decoration-none dropdown-item" href="{{site.baseurl}}/services-resources/wireless.html" title="">Wireless Connectivity</a>
+                                </li>
+                                <li >
+                                    <a class="text-decoration-none dropdown-item" href="{{site.baseurl}}/services-resources/labs.html" title="">Undergraduate Computer Labs</a>
+                                </li>
+              </ul>
+           <li class="nav-item">
+             <a class="nav-link {% if page.url == '/how-to-articles.html' %}active{% endif %}" href="{{site.baseurl}}/how-to-articles.html">How-To Articles</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link {% if page.url == '/internal.html' %}active{% endif %}" href="{{site.baseurl}}/internal.html">Internal</a>
+           </li>
+        </ul>
+    </div>
+  </div>
+</nav>

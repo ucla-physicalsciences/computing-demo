@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Computing and Information Systems Group</title>
+  
+  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/custom_bootstrap.css">
+  <link rel="SHORTCUT ICON" href="{{site.baseurl}}/assets/images/favicon.ico" />
+  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/update.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+          <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+  {% include nav.html %}
+  {% if page.title == 'Home'%} 
+  <div class="container pt-0"> 
+      <div class="col-12"></div> 
+      <img src="assets/images/pab-building_1.jpg" alt="..." class="img-fluid index-img"/>
+  </div> 
+  {% endif %}
+  <div class="container pt-0">            
+<div class="col-12"></div>
+    <div class="row left-side">
+        <div class="col-md-9">  
+          {{ content }}                   
+        </div>
+      <div class="col-md-3 "> 
+        <div class="right-side"> 
+           {% if page.title == 'How to article' %}   
+           {% include how-to-articles-categories.html %}
+           {% endif %}
+           {% include googleTranslateResource.html %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+   
+</div>     
+      
+  
+  {% include footer.html %}
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="{{site.baseurl}}/assets/js/main.js"></script>
+</body>
+</html>
