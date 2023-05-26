@@ -88,6 +88,53 @@ object-fit: cover;
     flex-wrap: wrap;
     font-size: 0.95em;
   }
+.nav-bg{
+    background-image:url(../images/computing-light-nowords.png);
+    /* Set rules to fill background */
+  min-height: 160px;
+  min-width: 1024px;
+  //* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    border: 0px;
+}
+.nav-logo1{    
+    display: flex;
+    vertical-align: top;    
+    flex-wrap: wrap;
+    padding-top: 10px;
+    font-family: Big Caslon;
+    color: #005587;
+    font-weight: bold;
+    line-height: 1.0cm;
+}
+.other-letter{
+  font-size: 2.0em;
+  color: #005587;
+}
+.first-letter {
+  font-size: 2.5em;
+  color: #005587;
+}
+.letter-margin-left{
+  margin-left: 60px;
+}
+.wifiTable{ 
+  width: 100%;
+  text-align: left;
+  background-color: #f2f2f2;
+  border-collapse: collapse; 
+  }
+.wifiTable th { 
+  background-color: #f2f2f2;
+  color: white; 
+  }
+.wifiTable td, 
+.wifiTable th { 
+  padding: 5px;
+  border: 1px solid #a3a2a2; 
+  }
 .footer-bs{
     background-color: #005587;
     width: 100%;

@@ -1,1 +1,1 @@
-# computing-demo
+# https://ucla-physicalsciences.github.io/computing-demo
