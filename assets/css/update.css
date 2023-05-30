@@ -99,6 +99,20 @@ object-fit: cover;
   background-size: cover;
     border: 0px;
 }
+.navbar-nav .nav-item{
+  color: #2774AE;
+  font-weight: bold;
+}
+.navbar-nav .nav-item:hover .nav-link {
+    background-color: #2774AE;
+    color: #FFFFFF;
+}
+.active{
+        color: #2774AE;
+        font-weight: bold;
+    }
+
+
 .nav-logo1{    
     display: flex;
     vertical-align: top;    
