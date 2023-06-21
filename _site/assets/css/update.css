@@ -134,6 +134,17 @@ object-fit: cover;
 .letter-margin-left{
   margin-left: 60px;
 }
+.emailSettingsTable{ 
+  text-align: left;
+  background-color: #f2f2f2;
+  border-collapse: collapse; 
+  }
+.emailSettingsTable td,
+.emailSettingsTable th
+{ 
+  padding: 5px;
+  border: 1px solid #a3a2a2; 
+}
 .wifiTable{ 
   width: 100%;
   text-align: left;
