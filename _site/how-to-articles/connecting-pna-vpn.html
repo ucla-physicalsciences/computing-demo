@@ -7,8 +7,24 @@
   <link rel="stylesheet" href="/computing-demo/assets/css/custom_bootstrap.css">
   <link rel="SHORTCUT ICON" href="/computing-demo/assets/images/favicon.ico" />
   <link rel="stylesheet" href="/computing-demo/assets/css/update.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- for collapse -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!-- for collapse -->
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
           <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+$(document).ready(function() {
+  $(this).on("click", ".vpn-connection", function() {
+    $(this).parent().find(".vpn-connection-info").toggle();
+    $(this).find(".fa").toggleClass('active');
+
+  });
+});
+</script> 
 </head>
 <body>
   <div class="flex-container p-1 text-white text-left" > 
@@ -135,25 +151,120 @@
         <div class="col-md-9">  
           <h3>Connecting To The PnA VPN</h3> <br>
 <p>Intructions for connecting to the Physics &amp; Astronomy VPN are available for Mac and PC. Note that you will need to sign in with your Physics &amp; Astronomy department e-mail username and password to view these articles.</p>
-                                            <p>
-                                                <strong>Please select your platform:</strong>
-                                            </p>
-                                            <ul>
-                                                <li>
-                                                    <a href="/how-to/connecting-pna-vpn-windows-computer">Windows XP, Vista, 7, or 8</a>
+<p><strong>Please select your platform:</strong></p>
+<div class="bg-gray"> 
+<div class="vpn-connection">
+    <i class="fa fa-caret-right" style="font-size:21px; color:#2774AE" aria-hidden="true"></i>
+    <span class="vpn-connection-span">Windows XP, Vista, 7, or 8</span>
+</div>
+    <div class="vpn-connection-info">
+        <div class="ml-3">
+            <br>
+             <p>
+                <a href="/sites/default/files/Windows-VPN-Configuration.swf">
+                <strong>Click here to watch a video screencast</strong>
+                </a>
+             </p>
+             <p>To connect to the UCLA PnA VPN from a Windows XP, Vista, 7, or 8 computer:</p>
+                <ol>
+                    <li>Download and install the Cisco VPN Client software
+                <ol>
+                    <li>
+                        <a href="/sites/default/files/vpnwin-5.0.07.0410.exe">Dowload the Cisco VPN Client software (32-bit, Windows XP, Vista, 7, 8)</a>
+                    </li>
+                    <li>
+                                                            <a href="/sites/default/files/vpnwinx64-5.0.07.0440.exe">Download the Cisco VPN Client software (64-bix, Windows XP, Vista, 7, 8)</a>
+                                                        </li>
+                                                    </ol>
                                                 </li>
                                                 <li>
-                                                    <a href="https://computing.pa.ucla.edu/how-to/using-vpn-microsoft-windows-10-private">Windows 10</a>
+                                                    <a href="/sites/default/files/UCLA%20PnA%20VPN.pcf">Download the UCLA PnA VPN Profile</a>
+                                                     (right click, save-as)
+                                                </li>
+                                                <li>Run the VPN Client program</li>
+                                                <li>Click Import</li>
+                                                <li>Select the UCLA PnA VPN Profile</li>
+                                                <li>Click Connect</li>
+                                                <li>Enter your Physics &amp; Astronomy department e-mail username and password</li>
+                                            </ol>
+                                            <h5>Note for Windows 8</h5>
+                                            <p>In Windows 8 an error will appear when attempting to connect to the VPN with the message "Failed to enable virtual adapter." To resolve this issue:</p>
+                                            <ol>
+                                                <li>Open Registry editor by typing regedit in the Run prompt</li>
+                                                <li>Browse to the Registry Key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CVirtA</li>
+                                                <li>
+                                                    Select the DisplayName to modify, and remove the leading characters from the value data upto "%;" i.e.
+                                                    <ol>
+                                                        <li>For x86, change the value data from something like "@oem8.inf,%CVirtA_Desc%;Cisco Systems VPN Adapter” to "Cisco Systems VPN Adapter”</li>
+                                                        <li>For x64, change the value data from something like "@oem8.inf,%CVirtA_Desc%;Cisco Systems VPN Adapter for 64-bit Windows” to "Cisco Systems VPN Adapter for 64-bit Windows”</li>
+                                                    </ol>
+                                                </li>
+                                                <li>Try connecting again</li>
+                                            </ol>
+                                            <h5>Note for Windows 8.1</h5>
+                                            <p>The Cisco VPN client software is not supported on Windows 8.1. The department is in the process of deploying replacement VPN endpoints that will allow for connectivity from Windows 8.1. However, there is no specific ETA at the moment. There are no recommended workarounds in the meantime.</p>
+                                            <br><br>
+        </div>
+    </div>
+</div>
+
+<div> 
+<div class="vpn-connection">
+    <i class="fa fa-caret-right" style="font-size:21px; color:#2774AE" aria-hidden="true"></i>
+    <span class="vpn-connection-span">Windows 10</span>
+</div>
+<div class="vpn-connection-info">
+    <div class="ml-3">
+            <br>
+            Intructions for using With Microsoft Windows 10 is in the UCLA BOx. Please click <a href="https://ucla.app.box.com/file/1277072663428" target="_blank">HERE</a> to sign in with your Physics & Astronomy department e-mail username and password to view the article.
+            <br><br>
+    </div>
+</div>
+</div>
+
+<div>
+<div class="vpn-connection">
+    <i class="fa fa-caret-right" style="font-size:21px; color:#2774AE" aria-hidden="true"></i>
+    <span class="vpn-connection-span">Apple Mac OS X (Pre-Ventura)</span>
+</div>
+<div class="vpn-connection-info">
+    <div class="ml-3">
+            <br>
+            Intructions for Connecting To The PnA VPN From A Mac Computer, Pre-Ventura is in the UCLA BOx. Please click <a href="https://ucla.app.box.com/file/1277074938519" target="_blank">HERE</a> to sign in with your Physics & Astronomy department e-mail username and password to view the article.
+            <br><br>
+    </div>
+</div>
+</div>
+
+<div>
+<div class="vpn-connection">
+    <i class="fa fa-caret-right" style="font-size:21px; color:#2774AE" aria-hidden="true"></i>
+    <span class="vpn-connection-span">*NEW 5/15/20* Cisco AnyConnect clients: Windows 7/8/10, Mac OS, iOS, Android, Chrome OS (Chromebooks), </span> 
+    <span class="vpn-connection-span ml-3"> if you're having difficulty with the above set-ups.</span>
+</div>
+<div class="vpn-connection-info">
+    <div class="ml-3">
+            <br>
+    <p>To connect to the UCLA Physics &amp; Astronomy VPN from various platforms: Windows 7/8/10, Mac OS, iOS, Android, Chrome OS (Chromebooks).</p>
+                                            <ol>
+                                                <li>
+                                                    Download the appropriate Cisco AnyConnect client installer from
+                                                    <p>
+                                                        <a href="https://www.it.ucla.edu/it-support-center/services/virtual-private-network-vpn-clients">https://www.it.ucla.edu/it-support-center/services/virtual-private-netwo...</a>
+                                                    </p>
+                                                    <p>(You will need to use your BOL credentials to access the page.  Download links to our repository will be added later).</p>
                                                 </li>
                                                 <li>
-                                                    <a href="/how-to/connecting-pna-vpn-mac-computer">Apple Mac OS X (Pre-Ventura)</a>
+                                                    Then launch the AnyConnect client app and use the VPN server address, 
+                                                    <strong>sslvpn.physics.ucla.edu</strong>
+                                                     and login using your Physics & Astronomy department e-mail  credentials.
                                                 </li>
-                                                <li>
-                                                    *NEW 5/15/20* 
-                                                    <a href="/how-to/connecting-pna-vpn-Cisco-AnyConnect-clients">Cisco AnyConnect clients</a>
-                                                    : Windows 7/8/10, Mac OS, iOS, Android, Chrome OS (Chromebooks), if you're having difficulty with the above set-ups.
-                                                </li>
-                                            </ul>                   
+                                            </ol>
+    </div>
+    <br><br>
+</div>
+</div>
+                   
         </div>
       <div class="col-md-3 "> 
         <div class="right-side"> 

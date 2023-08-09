@@ -184,3 +184,23 @@ text-decoration: none;}
 #footer-content {
   color: white;
 }
+.fa {
+  transition: transform .2s;
+}
+
+.fa.active {
+  transform: rotateZ(90deg);
+}
+.vpn-connection-info {
+  font-size: 0.75em; 
+  display: none;
+  background-color: #ebedf0;
+}
+.vpn-connection-span {
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 1.0em !important;
+  color: #2774AE !important;
+  font-weight: bold;
+  display: inline-block;
+}
+.ml-3 { margin-left: 0.75rem; }
