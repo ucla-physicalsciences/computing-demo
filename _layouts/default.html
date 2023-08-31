@@ -44,7 +44,10 @@ $(document).ready(function() {
         </div>
       <div class="col-md-3 "> 
         <div class="right-side"> 
-           {% if page.title == 'How to article' %}   
+           {% if page.path contains 'services-resources' %}   
+           {% include services-resources.html %}
+           {% endif %}
+           {% if page.path contains 'how-to-articles' %}   
            {% include how-to-articles-categories.html %}
            {% endif %}
            {% include googleTranslateResource.html %}
